@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Changing Hello World</title>
+	<script>
+
+		var colors = ["black", "blue", "green"];
+
+		function Color_Change() {
+			var text = document.getElementById("text");
+			var Color_now = text.style.color;
+			var color_ID = colors.indexOf(Color_now);
+			var next_ID = (color_ID + 1) % colors.length;
+			var nextColor = colors[next_ID];
+			text.style.color = nextColor;
+		}
+
+		setInterval(Color_Change, 1000);
+
+	</script>
+</head>
+
+<body>
+	<h1 id="text" >Hello World!</h1>
+</body>
+
+</html>
